@@ -1,0 +1,51 @@
+{
+    "name": "Canada Post",
+    "description": "Mail letters, ship parcels, market your business or sell from your online store with Canada Post. We have personal services for individuals and business services for business of all sizes.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1317-canada-post.jpg",
+    "tags": [
+        "api provider",
+        "commerce",
+        "have api",
+        "mail",
+        "postal"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/canada-post\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Canada Post",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1317-canada-post.jpg",
+            "humanURL": "http:\/\/www.canadapost.ca\/cpo\/mc\/business\/productsservices\/developers\/services\/fundamentals.jsf",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/canada-post-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Website",
+            "url": "http:\/\/www.canadapost.ca\/cpo\/mc\/business\/productsservices\/developers\/services\/fundamentals.jsf"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/canada-post-corporation"
+        },
+        {
+            "type": "Email",
+            "url": "fpc.tcp@canadapost.ca"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/canadapostcorp"
+        }
+    ]
+}
