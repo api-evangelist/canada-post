@@ -1,0 +1,97 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Canada Post
+providerId: canada-post
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Rate Limiting
+  - Logistics / Shipping
+  - Postal
+description: Canada Post references API throttle limits in its fundamentals documentation
+  but does not publish specific numeric quotas publicly. Rate limits are applied per
+  API key and may be adjusted by Canada Post for accounts with unusually high call
+  volumes. The sandbox environment (ct.soa-gw.canadapost.ca) returns static test data
+  and is subject to separate testing quotas. Developers should contact Canada Post
+  support for production quota details.
+sources:
+  - https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/fundamentals.jsf
+headers:
+  retryAfter: Retry-After
+responseCodes:
+  success: 200
+  successNoContent: 204
+  successPending: 202
+  notModified: 304
+  badRequest: 400
+  unauthorized: 401
+  forbidden: 403
+  notFound: 404
+  notAcceptable: 406
+  preconditionFailed: 412
+  unsupportedMediaType: 415
+  serverError: 500
+limits:
+  - name: API Throttle Limit
+    scope: api-key
+    metric: requests
+    limit: undisclosed
+    notes: >-
+      Canada Post applies throttle limits per API key but does not publish exact
+      numeric thresholds. Contact Canada Post developer support for quota details.
+      Endpoints for rating and post office lookup are free and not billed, but
+      are still subject to throttling. Production shipment endpoints are billed
+      at standard Canada Post postage rates per label created.
+  - name: Sandbox Static Responses
+    scope: environment
+    metric: requests
+    limit: undisclosed
+    notes: >-
+      The sandbox environment (https://ct.soa-gw.canadapost.ca) returns static
+      test data regardless of request input. Sandbox calls are not billed. Test
+      PIN is 123456789012. Test pickup request ID is 0074698052.
+  - name: Label Artifact Link Expiry
+    scope: resource
+    metric: days
+    limit: 90
+    notes: >-
+      Shipping label and manifest artifact links retrieved from the shipping API
+      expire 90 days after creation. Return label artifacts are available for
+      only 5 calendar days after creation.
+  - name: AddressComplete Find Results
+    scope: call
+    metric: results
+    limit: 8
+    notes: >-
+      A single call to the AddressComplete Interactive Find method returns a
+      maximum of 8 address candidate results.
+  - name: Pickup Advance Booking Window (with agreement)
+    scope: request
+    metric: days
+    limit: 30
+    notes: >-
+      Pickup requests can be submitted up to 30 days in advance for customers
+      with a Canada Post parcel agreement.
+  - name: Pickup Advance Booking Window (without agreement)
+    scope: request
+    metric: days
+    limit: 5
+    notes: >-
+      Pickup requests can be submitted up to 5 days in advance for customers
+      without a Canada Post parcel agreement.
+  - name: Rate Request Options
+    scope: call
+    metric: options
+    limit: 20
+    notes: >-
+      A single rating request supports up to 20 options (e.g., SO, COV, COD,
+      PA18, PA19, HFP, DNS, LAD) in the options array.
+  - name: AddressComplete Credit Expiry
+    scope: account
+    metric: months
+    limit: 12
+    notes: >-
+      Prepaid AddressComplete credits expire after 12 months or when the credit
+      balance is exhausted, whichever occurs first.

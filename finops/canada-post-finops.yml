@@ -1,0 +1,141 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Canada Post
+providerId: canada-post
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - FinOps
+  - FOCUS
+  - Logistics / Shipping
+  - Postal
+  - E-Commerce
+description: FOCUS-aligned FinOps guidance for Canada Post API consumption. The primary
+  cost driver is postage — each transmitted shipment (contract or non-contract) is
+  billed at standard Canada Post rates based on service, weight, dimensions, and destination.
+  AddressComplete lookups are billed as prepaid credits with volume-tiered pricing.
+  API access itself (rating, tracking, pickup, post office lookup) carries no per-call
+  fee beyond postage for label creation. Engineering teams should tag usage by business
+  unit, e-commerce platform, or fulfilment centre to enable chargeback and optimization.
+sources:
+  - https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/fundamentals.jsf
+  - https://www.canadapost-postescanada.ca/ac/pricing/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Canada Post
+serviceCategory: Logistics / Shipping
+billingModel:
+  pricingCategory: Usage-Based + Prepaid Credits
+  billingFrequency: Per-shipment (postage) / Prepaid bundle (AddressComplete)
+  billingCurrency: CAD
+focusColumns:
+  ServiceName: Canada Post
+  ServiceCategory: Logistics / Shipping
+  ProviderName: Canada Post
+  PublisherName: Canada Post
+  BillingCurrency: CAD
+meters:
+  - name: shipments_transmitted
+    unit: shipment
+    aggregation: sum
+    dimensions:
+      - service_code
+      - destination_type
+      - contract_type
+    notes: >-
+      Each transmitted shipment (via Transmit Shipments/manifest call) incurs
+      standard Canada Post postage. Rate varies by service code (e.g., DOM.RP,
+      DOM.EP, DOM.XP, USA.EP, INT.XP), parcel weight, dimensions, and origin/
+      destination postal code pair.
+  - name: address_lookups
+    unit: lookup
+    aggregation: sum
+    dimensions:
+      - address_type
+    notes: >-
+      Each successful AddressComplete Retrieve call consumes one credit.
+      Canadian address lookups are billed at the plan rate (4¢–11.6¢ per lookup).
+      International address lookups incur an additional 1¢ per call on top of
+      the base rate.
+  - name: rating_calls
+    unit: call
+    aggregation: sum
+    notes: >-
+      Rating calls (POST /rs/ship/price) are free and do not incur charges.
+      Track for capacity planning and to ensure calls are not inflating costs
+      elsewhere in the stack.
+  - name: api_calls_free
+    unit: call
+    aggregation: sum
+    dimensions:
+      - service
+    notes: >-
+      Tracking, pickup availability, post office lookup, returns, and service
+      information API calls are free. Track volume to manage throttle limits
+      and identify unexpected call spikes.
+principles:
+  - name: Visibility
+    description: >-
+      Enable cost visibility by tagging every shipment creation call with
+      metadata — merchant ID, fulfilment centre, carrier service, and business
+      unit. Use Get Manifest Details responses to reconcile billed amounts
+      against expected postage. Monitor AddressComplete credit consumption
+      daily via balance alerts configured at 20%, 10%, and 5% thresholds.
+  - name: Allocation
+    description: >-
+      Allocate postage costs to the originating business unit or e-commerce
+      platform using customer-number and group-id fields in the Contract
+      Shipping API. For multi-merchant platforms, use the mailed-on-behalf-of
+      (MOBO) customer pattern to separate billing per client account.
+  - name: Optimization
+    description: >-
+      Optimize costs by comparing rates across all service codes using the
+      Rating API before selecting a service at checkout. Void unused labels
+      promptly (within the valid window) using the Void Shipment endpoint to
+      avoid unnecessary postage charges. Right-size AddressComplete credit
+      bundles by projecting annual lookup volume — larger bundles reduce
+      per-lookup cost from 11.6¢ (Entry) to 4¢ (Premium) or lower (Enterprise).
+  - name: Accountability
+    description: >-
+      Set monthly postage spend budgets per merchant and configure alerts when
+      thresholds are reached. Review manifest settlement data (Get Manifest
+      Details) after each transmission cycle. Conduct quarterly reviews of
+      AddressComplete consumption versus purchased credits to right-size bundles
+      and avoid credit expiry waste (credits expire after 12 months).
+  - name: Benchmarking
+    description: >-
+      Track average postage cost per shipment by service code month-over-month.
+      Monitor the ratio of rating calls to actual shipments created — a high
+      ratio may indicate abandoned carts or failed checkout flows. Benchmark
+      AddressComplete lookup-to-conversion rates to validate ROI of address
+      validation investment.
+costDrivers:
+  - driver: postage_per_shipment
+    description: Standard Canada Post postage billed per transmitted shipment.
+      Rates vary by service (domestic, USA, international), weight, dimensions,
+      and postal code pair. The dominant cost driver for e-commerce integrations.
+    billedBy: transmission (manifest)
+  - driver: addresscomplete_credits
+    description: Prepaid credit consumption per address Retrieve call. Tiered
+      from 11.6¢ (Entry/300 lookups) down to 4¢ (Premium/500,000 lookups)
+      with custom Enterprise rates above 500,000 lookups.
+    billedBy: prepaid bundle
+  - driver: pickup_charges
+    description: Parcel pickup fees for on-demand pickup requests. Commercial
+      customers with parcel agreements are billed to their account; non-contract
+      customers are charged to the default credit card on file.
+    billedBy: per pickup
+freeCalls:
+  - Rating Web Service (all rate calculation calls)
+  - Tracking Web Service (summary and detail queries)
+  - Find a Post Office API
+  - Deliver to Post Office API
+  - Pickup Availability checks
+  - Service Information API
+  - Sandbox environment (all calls)

@@ -1,0 +1,219 @@
+aid: canada-post
+name: Canada Post
+description: Canada Post is the primary postal operator in Canada, offering a developer
+  platform with REST and SOAP web services for e-commerce merchants and solution providers.
+  APIs cover shipping label generation, rate calculation, parcel tracking, address
+  validation (AddressComplete), parcel pickup scheduling, returns management, post
+  office location lookup, and service information.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2026-06-13'
+modified: '2026-06-13'
+position: Consumer
+tags:
+  - Address Validation
+  - E-Commerce
+  - Labels
+  - Logistics
+  - Pickup
+  - Postal
+  - Rating
+  - Returns
+  - Shipping
+  - Tracking
+url: https://raw.githubusercontent.com/api-evangelist/canada-post/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: canada-post:rating
+    name: Canada Post Rating Web Service
+    description: Returns available shipping services and their rates for a given origin
+      postal code, destination, parcel weight, and dimensions. Supports domestic, US,
+      and international destinations. Returns base cost, taxes, transit time, and expected
+      delivery date for each eligible service. Rate calls do not incur charges.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/rating/getrates/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Rating
+      - Pricing
+      - Shipping
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/rating/getrates/default.jsf
+      - type: GettingStarted
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/gettingstarted.jsf
+  - aid: canada-post:contract-shipping
+    name: Canada Post Contract Shipping Web Service
+    description: Enables commercial customers with a Canada Post parcel agreement to
+      create domestic and international shipments, generate shipping labels (PDF or ZPL),
+      retrieve shipment pricing, manage shipment groups, transmit manifests for billing,
+      void labels, and request refunds. Requires a valid customer number and contract ID.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/shippingmanifest/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Shipping
+      - Labels
+      - Manifests
+      - Logistics
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/shippingmanifest/default.jsf
+  - aid: canada-post:non-contract-shipping
+    name: Canada Post Non-Contract Shipping Web Service
+    description: Allows general businesses and VentureOne card holders to create domestic
+      and international shipments and generate labels without a formal Canada Post parcel
+      agreement. Charges are applied to a credit card on file rather than a contract account.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/shippingmanifest/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Shipping
+      - Labels
+      - Logistics
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/shippingmanifest/default.jsf
+  - aid: canada-post:tracking
+    name: Canada Post Tracking Web Service
+    description: Provides parcel tracking capabilities using a PIN (Parcel Identification
+      Number), DNC (Delivery Notice Card), or customer reference number. Returns tracking
+      summary (most recent event) or full tracking details (all scan events), and supports
+      retrieval of a delivery confirmation certificate as a PDF artifact.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/tracking/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Tracking
+      - Shipping
+      - Logistics
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/tracking/default.jsf
+  - aid: canada-post:address-complete
+    name: Canada Post AddressComplete API
+    description: Address validation and auto-complete web service backed by Canada Post's
+      authoritative Canadian address database. Implements a two-step Find/Retrieve flow
+      — Find returns up to 8 candidate matches on each keystroke, Retrieve returns the
+      full validated address record. Also supports international addresses at an additional
+      cost per lookup.
+    humanURL: https://www.canadapost-postescanada.ca/ac/support/api/
+    baseURL: https://ws1.postescanada-canadapost.ca
+    tags:
+      - Address Validation
+      - E-Commerce
+      - Checkout
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/ac/support/api/
+      - type: Pricing
+        url: https://www.canadapost-postescanada.ca/ac/pricing/
+  - aid: canada-post:pickup
+    name: Canada Post Pickup Web Service
+    description: Enables e-commerce platforms to schedule, modify, retrieve, and cancel
+      on-demand parcel pickups. Supports checking pickup availability and cut-off times
+      by postal code. Pickups can be booked up to 30 days in advance (with parcel agreement)
+      or 5 days in advance (without agreement), and same-day requests must be submitted
+      at least one hour before the desired time.
+    humanURL: https://www.canadapost-postescanada.ca/cpc/en/support/kb/business/parcel-pickup/parcel-pickup-api-integration-tips-for-e-commerce.page
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Pickup
+      - Shipping
+      - Logistics
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/cpc/en/support/kb/business/parcel-pickup/parcel-pickup-api-integration-tips-for-e-commerce.page
+  - aid: canada-post:returns
+    name: Canada Post Returns Web Service
+    description: Generates return shipping labels for authorized returns (pre-approved
+      by merchant) and open returns (customer-initiated). Supports both REST and SOAP
+      protocols. Return labels are retrievable for up to 5 calendar days after creation.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Returns
+      - Shipping
+      - Labels
+      - E-Commerce
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+  - aid: canada-post:find-post-office
+    name: Canada Post Find a Post Office API
+    description: Returns a list of Canada Post retail post office locations near a given
+      postal code or address, including hours of operation and available services. Useful
+      for presenting drop-off locations to customers at checkout.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Locations
+      - Post Office
+      - Retail
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+  - aid: canada-post:deliver-to-post-office
+    name: Canada Post Deliver to Post Office API
+    description: Allows customers to select a post office as the delivery destination
+      instead of a residential or commercial address at checkout. Integrates with the
+      Find a Post Office service to present eligible pickup locations for a given shipment.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Delivery
+      - Post Office
+      - E-Commerce
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+  - aid: canada-post:service-info
+    name: Canada Post Service Information API
+    description: Provides information about scheduled outages and service disruptions
+      to Canada Post web services, enabling applications to surface maintenance windows
+      to developers and end users.
+    humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+    baseURL: https://soa-gw.canadapost.ca
+    tags:
+      - Status
+      - Outages
+      - Operations
+    properties:
+      - type: Documentation
+        url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+common:
+  - type: Website
+    url: https://www.canadapost-postescanada.ca/
+  - type: DeveloperPortal
+    url: https://www.canadapost-postescanada.ca/information/app/drc/home?execution=e1s1
+  - type: Documentation
+    url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/fundamentals.jsf
+  - type: GettingStarted
+    url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/gettingstarted.jsf
+  - type: Catalog
+    url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+  - type: SignUp
+    url: https://sso-osu.canadapost-postescanada.ca/pfe-pap/en/registration
+  - type: Login
+    url: https://sso-osu.canadapost-postescanada.ca/lfe-cap/en/login
+  - type: Sandbox
+    url: https://ct.soa-gw.canadapost.ca
+  - type: Forum
+    url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
+  - type: IntegratePage
+    url: https://www.canadapost-postescanada.ca/cpc/en/commercial/integrate-apis.page
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/canada-post
+  - type: Features
+    data:
+      - Free developer program registration; API keys issued per environment (sandbox and production)
+      - REST and SOAP protocols supported across all services; XML request/response bodies
+      - Sandbox base URL https://ct.soa-gw.canadapost.ca; production base URL https://soa-gw.canadapost.ca
+      - Basic HTTP authentication (Base64-encoded API key) on all calls
+      - Rating and post office location calls are free; shipping label creation incurs standard Canada Post postage charges
+      - AddressComplete priced separately on a credit-based model (see plans)
+      - API throttle limits exist but are not publicly specified; contact Canada Post for quota details
+      - Code samples provided in Java, PHP, and C# for REST and SOAP
+    sources:
+      - https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/fundamentals.jsf
+    updated: '2026-06-13'
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

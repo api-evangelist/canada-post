@@ -1,0 +1,280 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Canada Post
+providerId: canada-post
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Logistics / Shipping
+  - Postal
+  - E-Commerce
+description: Canada Post Developer Program registration is free. The core shipping,
+  rating, tracking, pickup, and returns APIs are free to access; production shipments
+  incur standard Canada Post postage charges based on service, weight, and destination.
+  AddressComplete (address validation) is billed separately on a prepaid credit model
+  with tiered pricing per lookup. No formal subscription tiers exist for the shipping
+  APIs — usage is metered through actual postage billed to a Canada Post account or
+  credit card.
+sources:
+  - https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/gettingstarted.jsf
+  - https://www.canadapost-postescanada.ca/ac/pricing/
+plans:
+  - id: canada-post-free-developer
+    name: Free Developer Program
+    type: free
+    description: Free registration to the Canada Post Developer Program. Includes sandbox
+      and production API keys, access to all shipping, tracking, rating, pickup, and
+      returns web services. Production shipment costs are billed at standard Canada Post
+      postage rates; API access itself is free.
+    entries:
+      - label: Developer registration
+        name: registration
+        type: free
+        metric: account
+        limit: -1
+        timeFrame: month
+        geo: CA
+        unit: 1
+        price: 0
+        userMultiplied: false
+    elements:
+      - name: Sandbox environment (ct.soa-gw.canadapost.ca)
+      - name: Production environment (soa-gw.canadapost.ca)
+      - name: API keys for sandbox and production
+      - name: Rating Web Service (no charge per call)
+      - name: Contract Shipping Web Service
+      - name: Non-Contract Shipping Web Service
+      - name: Tracking Web Service
+      - name: Pickup Web Service
+      - name: Returns Web Service
+      - name: Find a Post Office API
+      - name: Deliver to Post Office API
+      - name: Service Information API
+      - name: Code samples in Java, PHP, and C#
+      - name: Developer forum access
+  - id: canada-post-addresscomplete-entry
+    name: AddressComplete Entry
+    type: paid
+    description: Prepaid credit bundle for 300 Canadian address lookups via the AddressComplete
+      API. Credits expire after 12 months or when exhausted, whichever comes first.
+      International address lookups cost an additional 1 cent per lookup on top of the
+      base rate.
+    entries:
+      - label: 300 lookups
+        name: entry-300
+        type: prepaid
+        metric: lookup
+        limit: 300
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.116
+        userMultiplied: false
+    elements:
+      - name: 300 Canadian address lookups
+      - name: International lookups at +1¢ each
+      - name: Auto top-up available
+      - name: Balance alerts at 20%, 10%, and 5% thresholds
+  - id: canada-post-addresscomplete-small
+    name: AddressComplete Small
+    type: paid
+    description: Prepaid credit bundle for 1,000 Canadian address lookups at 10 cents each.
+    entries:
+      - label: 1,000 lookups
+        name: small-1000
+        type: prepaid
+        metric: lookup
+        limit: 1000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.10
+        userMultiplied: false
+    elements:
+      - name: 1,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+      - name: Auto top-up available
+  - id: canada-post-addresscomplete-standard
+    name: AddressComplete Standard
+    type: paid
+    description: Prepaid credit bundle for 2,500 Canadian address lookups at 9.5 cents each.
+    entries:
+      - label: 2,500 lookups
+        name: standard-2500
+        type: prepaid
+        metric: lookup
+        limit: 2500
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.095
+        userMultiplied: false
+    elements:
+      - name: 2,500 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-medium
+    name: AddressComplete Medium
+    type: paid
+    description: Prepaid credit bundle for 5,000 Canadian address lookups at 9 cents each.
+    entries:
+      - label: 5,000 lookups
+        name: medium-5000
+        type: prepaid
+        metric: lookup
+        limit: 5000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.09
+        userMultiplied: false
+    elements:
+      - name: 5,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-large
+    name: AddressComplete Large
+    type: paid
+    description: Prepaid credit bundle for 10,000 Canadian address lookups at 8.5 cents each.
+    entries:
+      - label: 10,000 lookups
+        name: large-10000
+        type: prepaid
+        metric: lookup
+        limit: 10000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.085
+        userMultiplied: false
+    elements:
+      - name: 10,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-xl
+    name: AddressComplete XL
+    type: paid
+    description: Prepaid credit bundle for 25,000 Canadian address lookups at 8 cents each.
+    entries:
+      - label: 25,000 lookups
+        name: xl-25000
+        type: prepaid
+        metric: lookup
+        limit: 25000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.08
+        userMultiplied: false
+    elements:
+      - name: 25,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-2xl
+    name: AddressComplete 2XL
+    type: paid
+    description: Prepaid credit bundle for 50,000 Canadian address lookups at 7.5 cents each.
+    entries:
+      - label: 50,000 lookups
+        name: 2xl-50000
+        type: prepaid
+        metric: lookup
+        limit: 50000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.075
+        userMultiplied: false
+    elements:
+      - name: 50,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-3xl
+    name: AddressComplete 3XL
+    type: paid
+    description: Prepaid credit bundle for 100,000 Canadian address lookups at 7 cents each.
+    entries:
+      - label: 100,000 lookups
+        name: 3xl-100000
+        type: prepaid
+        metric: lookup
+        limit: 100000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.07
+        userMultiplied: false
+    elements:
+      - name: 100,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-4xl
+    name: AddressComplete 4XL
+    type: paid
+    description: Prepaid credit bundle for 200,000 Canadian address lookups at 6.5 cents each.
+    entries:
+      - label: 200,000 lookups
+        name: 4xl-200000
+        type: prepaid
+        metric: lookup
+        limit: 200000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.065
+        userMultiplied: false
+    elements:
+      - name: 200,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-5xl
+    name: AddressComplete 5XL
+    type: paid
+    description: Prepaid credit bundle for 300,000 Canadian address lookups at 5.5 cents each.
+    entries:
+      - label: 300,000 lookups
+        name: 5xl-300000
+        type: prepaid
+        metric: lookup
+        limit: 300000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.055
+        userMultiplied: false
+    elements:
+      - name: 300,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-premium
+    name: AddressComplete Premium
+    type: paid
+    description: Prepaid credit bundle for 500,000 Canadian address lookups at 4 cents each.
+    entries:
+      - label: 500,000 lookups
+        name: premium-500000
+        type: prepaid
+        metric: lookup
+        limit: 500000
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: 0.04
+        userMultiplied: false
+    elements:
+      - name: 500,000 Canadian address lookups
+      - name: International lookups at +1¢ each
+  - id: canada-post-addresscomplete-enterprise
+    name: AddressComplete Enterprise
+    type: enterprise
+    description: Custom pricing for more than 500,000 Canadian address lookups per year.
+      Contact Canada Post for negotiated rates.
+    entries:
+      - label: 500,000+ lookups (custom)
+        name: enterprise-custom
+        type: prepaid
+        metric: lookup
+        limit: -1
+        timeFrame: year
+        geo: CA
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Volume over 500,000 Canadian address lookups
+      - name: Custom per-lookup rate
+      - name: International lookups at +1¢ each
