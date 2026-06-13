@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "source": "https://www.canadapost-postescanada.ca/blogs/business/",
+    "fetched": "2026-06-13",
+    "provider": "canada-post"
+  },
+  "blogs": [
+    {
+      "title": "Understand shipping surcharges to boost your bottom line",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/ecommerce/ecommerce-insights/understand-shipping-surcharges-to-boost-your-bottom-line/",
+      "category": "E-commerce Insights",
+      "description": "Explores how comprehending shipping surcharge structures can improve profitability for online retailers."
+    },
+    {
+      "title": "Who really delivers the last mile for your business?",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/ecommerce/ecommerce-insights/who-really-delivers-the-last-mile-for-your-business/",
+      "category": "E-commerce Insights",
+      "description": "Examines final-delivery considerations for e-commerce operations."
+    },
+    {
+      "title": "How to create a clear returns policy for your small business",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/ecommerce/ecommerce-insights/how-to-create-a-clear-returns-policy-for-your-small-business/",
+      "category": "E-commerce Insights",
+      "description": "Provides guidance on establishing transparent return procedures."
+    },
+    {
+      "title": "Is your returns experience working? Questions you should be asking.",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/ecommerce/ecommerce-insights/is-your-returns-experience-working-questions-you-should-be-asking/",
+      "category": "E-commerce Insights",
+      "description": "Evaluates returns processes through critical assessment questions."
+    },
+    {
+      "title": "Canada's urban and suburban growth is reshaping in-city shipping",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/marketing/canadas-urban-and-suburban-growth-is-reshaping-in-city-shipping/",
+      "category": "Marketing Insights",
+      "description": "Analyzes how Canadian demographic changes impact metropolitan delivery strategies."
+    },
+    {
+      "title": "Qualinet and Canada Post ensure customers know who to call when disaster strikes",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/marketing/qualinet-and-canada-post-ensure-customers-know-who-to-call-when-disaster-strikes/",
+      "category": "Marketing Insights",
+      "description": "Case study demonstrating partnership approach to emergency customer communication."
+    },
+    {
+      "title": "Yes, catalogues drive sales. Here's how to prove it.",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/marketing/yes-catalogues-drive-sales-heres-how-to-prove-it/",
+      "category": "Marketing Insights",
+      "description": "Presents evidence supporting catalogue effectiveness in generating sales."
+    },
+    {
+      "title": "Tepperman's and Canada Post turn a centennial catalogue into record in-store traffic",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/marketing/teppermans-and-canada-post-turn-a-centennial-catalogue-into-record-in-store-traffic/",
+      "category": "Marketing Insights",
+      "description": "Success story showcasing catalogue-driven retail foot traffic."
+    },
+    {
+      "title": "Five questions to ask about secure delivery before choosing a carrier",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/shipping/five-questions-to-ask-about-secure-delivery-before-choosing-a-carrier/",
+      "category": "Shipping Insights",
+      "description": "Outlines essential evaluation criteria for selecting shipping providers."
+    },
+    {
+      "title": "Root to Glory delivers on its beauty promise with Canada Post",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/shipping/root-to-glory-delivers-on-its-beauty-promise-with-canada-post/",
+      "category": "Shipping Success Stories",
+      "description": "Highlights a beauty business's operational success through partnership."
+    },
+    {
+      "title": "Canadian small businesses reveal keys to a successful carrier relationship",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/shipping/canadian-small-businesses-reveal-keys-to-a-successful-carrier-relationship/",
+      "category": "Shipping Success Stories",
+      "description": "Insights from businesses on maintaining productive logistics partnerships."
+    },
+    {
+      "title": "Canadian small businesses offer advice on successfully scaling your operations",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/shipping/canadian-small-businesses-offer-advice-on-successfully-scaling-your-operations/",
+      "category": "Shipping Insights",
+      "description": "Practical guidance on expansion strategies from established small enterprises."
+    },
+    {
+      "title": "Partner in growth",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/small-business/partner-in-growth-rude-mama/",
+      "category": "Small Business",
+      "description": "Growth story featuring business development partnership."
+    },
+    {
+      "title": "Reimagining retail experiences through digital transformation",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/ecommerce/reimagining-retail-experiences-through-digital-transformation/",
+      "category": "E-commerce",
+      "description": "Explores how digital transformation can enhance retail customer experiences."
+    },
+    {
+      "title": "Designing your customers' receiving experience: E-commerce lab",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/shipping/designing-your-customers-receiving-experience-e-commerce-lab-video/",
+      "category": "Shipping Insights",
+      "description": "Video-based content covering strategies for optimizing the delivery experience."
+    },
+    {
+      "title": "Free shipping strategy: Is your business ready to deliver?",
+      "url": "https://www.canadapost-postescanada.ca/blogs/business/shipping/free-shipping-strategy-is-your-business-ready-to-deliver/",
+      "category": "Shipping Insights",
+      "description": "Analyzes free shipping approaches for e-commerce businesses."
+    }
+  ]
+}
