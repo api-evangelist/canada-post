@@ -6,7 +6,7 @@ description: Canada Post is the primary postal operator in Canada, offering a de
   validation (AddressComplete), parcel pickup scheduling, returns management, post
   office location lookup, and service information.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2026-06-13'
 modified: '2026-06-13'
