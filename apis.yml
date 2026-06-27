@@ -189,13 +189,13 @@ common:
     url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/gettingstarted.jsf
   - type: Catalog
     url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
-  - type: SignUp
+  - type: Signup
     url: https://sso-osu.canadapost-postescanada.ca/pfe-pap/en/registration
   - type: Login
     url: https://sso-osu.canadapost-postescanada.ca/lfe-cap/en/login
   - type: Sandbox
     url: https://ct.soa-gw.canadapost.ca
-  - type: Forum
+  - type: Forums
     url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
   - type: IntegratePage
     url: https://www.canadapost-postescanada.ca/cpc/en/commercial/integrate-apis.page
