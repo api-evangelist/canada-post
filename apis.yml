@@ -179,6 +179,8 @@ apis:
       - type: Documentation
         url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
 common:
+  - type: DomainSecurity
+    url: security/canada-post-domain-security.yml
   - type: Website
     url: https://www.canadapost-postescanada.ca/
   - type: DeveloperPortal
