@@ -35,7 +35,7 @@ tags:
   - Shipping
   - Tracking
 url: https://raw.githubusercontent.com/api-evangelist/canada-post/refs/heads/main/apis.yml
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: canada-post:rating
     name: Canada Post Rating Web Service
