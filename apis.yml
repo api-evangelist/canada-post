@@ -186,6 +186,9 @@ apis:
     tags:
       - Status
       - Outages
+    tags_raw:
+      - Status
+      - Outages
       - Operations
     properties:
       - type: Documentation
