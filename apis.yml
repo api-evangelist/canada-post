@@ -41,6 +41,17 @@ tags:
   - Logistics
   - Pickup
   - Postal
+  - Ratings
+  - Returns
+  - Shipping
+  - Tracking
+tags_raw:
+  - Address Validation
+  - E-Commerce
+  - Labels
+  - Logistics
+  - Pickup
+  - Postal
   - Rating
   - Returns
   - Shipping
@@ -57,6 +68,10 @@ apis:
     humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/rating/getrates/default.jsf
     baseURL: https://soa-gw.canadapost.ca
     tags:
+      - Ratings
+      - Pricing
+      - Shipping
+    tags_raw:
       - Rating
       - Pricing
       - Shipping
@@ -167,6 +182,10 @@ apis:
     humanURL: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
     baseURL: https://soa-gw.canadapost.ca
     tags:
+      - Location
+      - Post Office
+      - Retail
+    tags_raw:
       - Locations
       - Post Office
       - Retail
