@@ -224,6 +224,12 @@ apis:
       - type: Documentation
         url: https://www.canadapost-postescanada.ca/info/mc/business/productsservices/developers/services/default.jsf
 common:
+  - type: Plans
+    url: plans/canada-post-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/canada-post-rate-limits.yml
+  - type: FinOps
+    url: finops/canada-post-finops.yml
   - type: DomainSecurity
     url: security/canada-post-domain-security.yml
   - type: Website
