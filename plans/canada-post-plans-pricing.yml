@@ -283,3 +283,117 @@ plans:
       - name: Volume over 500,000 Canadian address lookups
       - name: Custom per-lookup rate
       - name: International lookups at +1¢ each
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - subscription
+  units:
+  - object
+  - request
+  plans:
+  - name: Free Developer Program
+    access: free
+    model: free
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: AddressComplete Entry
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete Small
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete Standard
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete Medium
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete Large
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete XL
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete 2XL
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete 3XL
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete 4XL
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete 5XL
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete Premium
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
+  - name: AddressComplete Enterprise
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - year
