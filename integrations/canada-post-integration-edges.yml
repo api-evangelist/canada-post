@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/canada-post/integrations
+- https://n8n.io/integrations/canada-post/
+- https://composio.dev/toolkits/canada-post
+- https://monid.ai/tools/canada-post
+checked:
+- https://composio.dev/toolkits/canada-post
+- https://monid.ai/tools/canada-post
+- https://n8n.io/integrations/canada-post/
+- https://zapier.com/apps/canada-post/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
