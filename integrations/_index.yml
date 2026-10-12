@@ -18,9 +18,9 @@
     value: canada_post
     property: components.schemas.CarriersEnum
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
+    detected: '2026-10-13'
     spec_url: https://docs.goshippo.com/spec/shippoapi/public-api.yaml
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: canada-post-karrio
   label: karrio
@@ -37,6 +37,6 @@
     value: canadapost
     property: schemas.TrackingData.carrier_name
     detected_by: detect-carrier-edges.py
-    detected: '2026-10-12'
-  status: pending-partner-spec
+    detected: '2026-10-13'
+  status: not-a-workflow
   arazzo: null
